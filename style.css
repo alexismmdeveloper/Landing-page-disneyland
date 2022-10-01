@@ -1,0 +1,339 @@
+/* #5EC9FF */
+
+:root {
+    --colorBase: #373F41;
+}
+/* ---------------------- CSS-GENERAL -------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a { text-decoration: none; }
+li { list-style: none; }
+
+.boxshadow { box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%); }
+
+/* --------------------------NAV ----------------------------- */
+
+.navContent {width: 100%;}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 10px 20px;
+}
+
+.navbar_fijo {
+    position: fixed;
+    top: 0;
+}
+
+.navbar_logo_img {
+    width: 60px;
+    height: 60px;
+    object-fit: scale-down;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.list_a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+#toggler,
+.navbar_label {
+    display: none;
+}
+
+.fa-bars {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.enlaces_1,
+.enlaces_2 {
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.enlaces_1 {
+    background-color: #1E64F2;
+    color: #fff;
+}
+
+.enlaces_2 {
+    background-color: #ededed;
+    color: #232330;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar_label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .enlaces {
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
+
+/* ---------------------- coverPage -------------------------- */
+
+.coverPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-position: top;
+    background-size: cover;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.wdwnt.com/2022/04/Sleeping-Beauty-Castle-Disneyland-stock.jpg");
+}
+
+.coverPage_section {
+    width: 100%;
+    max-width: 700px;
+    min-height: 400px;
+    margin: 0px 20px;
+    color: #fff;
+}
+
+.coverPage_section_h3 {
+    padding-top: 50px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.coverPage_section_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+.coverPage_section_a {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.button1 {
+    border: none;
+    background-color: #1E64F2;
+}
+
+.button1:hover {
+    border: 1px solid #fff;
+}
+
+.button2:hover {
+    background-color: #fff;
+    color: #1E64F2;
+}
+
+@media screen and (min-width: 500px) {
+    .coverPage_section_h3 {
+        font-size: 2.5rem;
+    }
+}
+/* ---------------------- SCROLL-TEXT-------------------------- */
+
+#scroll-container {
+    overflow: hidden;
+    background-color: #232330;
+    color: #fff;
+    padding: 10px 0px;
+}
+
+#scroll-text {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: my-animation 10s linear infinite;
+    -webkit-animation: my-animation 10s linear infinite;
+    animation: my-animation 10s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+    from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    }
+    to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    }
+}
+
+/* ---------------------- SECTIONS -------------------------- */
+
+.section1 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #5EC9FF;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.section1-services_title {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.section1-services {
+    padding: 20px;
+}
+
+.service {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.service1,
+.service2,
+.service3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+    background-color: #c7dce6;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.section2-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    grid-auto-flow: dense;
+    width: 100%;
+    background-color: #c7dce6;
+}
+
+.grid-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+@media (min-width: 600px){
+    .wide {
+        grid-column: span 2;
+    }
+    .tall {
+        grid-row: span 2;
+    }
+}
+
+@media (min-width: 900px){
+    .service {
+        flex-direction: row;
+    }
+}
+
+/* ---------------------- FOOTER -------------------------- */
+
+.footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    background-color: #fff;
+    gap: 50px;
+}
+
+.footer-copyright {
+    width: 100%;
+    background-color: #232330;
+    text-align: center;
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 0.8rem;
+}
